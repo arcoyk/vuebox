@@ -1,0 +1,18 @@
+<div id="app">
+  {{ message }}
+  <button v-on:click="extendMessage">extend</button>
+</div>
+<script src="vue.js"></script>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      message: "hello" + new Date().toLocaleString()
+    },
+    methods: {
+      extendMessage: function() {
+        this.message = this.message + " hoge hoge"
+      }
+    }
+  })
+</script>

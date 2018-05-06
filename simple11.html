@@ -1,0 +1,20 @@
+<div id='app'>
+  <span>Message: {{ msg }} </span>
+  <p v-if='seen'>You can see me</p>
+  <button v-on:click="change">change</button>
+</div>
+<script src="vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      msg: 'hello',
+      seen: true
+    },
+    methods: {
+      change: function() {
+        this.seen = !this.seen;
+      }
+    }
+  })
+</script>

@@ -1,0 +1,21 @@
+<div id='app'>
+  <span>Message: {{ msg }} </span>
+  <input v-model='question'>
+  <span>Answer: {{ ans }} </span>
+</div>
+<script src="vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      msg: 'hello',
+      ans: 'none',
+      question: 'What is your dream'
+    },
+    watch: {
+      question: function (q) {
+        this.ans = q + 1
+      }
+    }
+  })
+</script>

@@ -1,0 +1,20 @@
+<div id='app'>
+  <span>Message: {{ msg }} </span>
+  <span>{{ ok ? 'YES' : 'NO' }}</span>
+  <button v-on:click="change">change</button>
+</div>
+<script src="vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      msg: 'hello',
+      ok: false
+    },
+    methods: {
+      change: function() {
+        this.ok = !this.ok;
+      }
+    }
+  })
+</script>

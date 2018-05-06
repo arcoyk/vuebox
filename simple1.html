@@ -1,0 +1,27 @@
+<div id="app">
+  {{ title }}
+  <span v-if="morning">
+    {{ message }}
+  </span>
+  <ul>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ul>
+</div>
+<script src="vue.js"></script>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      title: "Vue",
+      morning: true,
+      message: "hello" + new Date().toLocaleString(),
+      todos: [
+        { text: "Buy food" },
+        { text: "Clean room" },
+        { text: "Sleep"}
+      ]
+    }
+  })
+</script>

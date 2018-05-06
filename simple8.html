@@ -1,0 +1,24 @@
+<div id='app'>
+  <span v-once>Current time: {{ time }}</span>
+  <span>Message: {{ msg }} </span>
+  <span v-html="small_html_template"></span>
+  <button v-on:click="change">change</button>
+</div>
+<script src="vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      time: '2018-1-1',
+      msg: 'hello',
+      small_html_template: ''
+    },
+    methods: {
+      change: function() {
+        this.time = '2018-1-2';
+        this.msg = 'goodbye';
+        this.small_html_template = '<h1>hoge</h1>';
+      }
+    }
+  })
+</script>
