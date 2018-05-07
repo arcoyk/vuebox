@@ -1,0 +1,20 @@
+<div id='app'>
+  <ul>
+    <div v-for="food in foods">
+      <li> {{ food.name }} </li>
+      <li> {{ food.amount }} </li>
+    </div>
+  </ul>
+</div>
+<script src="vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      foods: [
+        { name: 'chocolate', amount: 23 },
+        { name: 'orange',    amount: 33 }
+      ]
+    }
+  })
+</script>

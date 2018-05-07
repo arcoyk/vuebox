@@ -1,0 +1,30 @@
+<style>
+  .active {
+    color: red;
+  }
+  .bigName {
+    size: 30px;
+  }
+</style>
+<div id='app'>
+  <p v-bind:class="hogeClass">This is red because data.hogeClass.active is true</p>
+  <button v-on:click="change active">change</button>
+</div>
+<script src="vue.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      hogeClass: {
+        active: true,
+        bigName: true
+      }
+    },
+    methods: {
+      change: function() {
+        console.log(32);
+        this.hogeClass.active = !this.hogeClass.active;
+      }
+    }
+  })
+</script>
